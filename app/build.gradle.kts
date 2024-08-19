@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -49,4 +50,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation("androidx.test.ext:junit:1.2.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-alpha03")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0-alpha03")
+    implementation("androidx.activity:activity-ktx:1.3.1")
+    implementation("androidx.room:room-runtime:2.3.0")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
 }
