@@ -25,7 +25,7 @@ abstract class ContactsDatabase: RoomDatabase() {
 //            creates a new database
 //            activity context, global application context
             return database as ContactsDatabase
-            ("mon-nullable")
+
         }
     }
 

@@ -1,11 +1,8 @@
-package com.akirachix.mycontacts
+package com.akirachix.mycontacts.ui
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.akirachix.mycontacts.databinding.ActivityAddContactBinding
 import com.akirachix.mycontacts.model.Contact
 import com.akirachix.mycontacts.viewmodel.ContactsViewModel
@@ -49,6 +46,7 @@ class AddContactActivity : AppCompatActivity() {
         if (!error){
             val newContact = Contact(contactId = 0, name= name, email= email, phoneNumber = phone, avatar = "" )
             contactsViewModel.saveContact(newContact)
+            finish()
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.akirachix.mycontacts
+package com.akirachix.mycontacts.model
 
 import android.app.Application
 import android.content.Context
@@ -7,7 +7,6 @@ class ContactsApp: Application() {
     companion object{
         lateinit var appContext: Context
     }
-
     override fun onCreate() {
         super.onCreate()
         appContext = applicationContext

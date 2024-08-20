@@ -1,6 +1,7 @@
 package com.akirachix.mycontacts.repository
 
-import com.akirachix.mycontacts.ContactsApp
+import androidx.lifecycle.LiveData
+import com.akirachix.mycontacts.model.ContactsApp
 import com.akirachix.mycontacts.database.ContactsDatabase
 import com.akirachix.mycontacts.model.Contact
 import kotlinx.coroutines.Dispatchers
@@ -14,4 +15,7 @@ class ContactsRepository {
            database.getContactDao().insertContact(contact)
        }
    }
+    fun getAllContacts():LiveData<List<Contact>>{
+        return database.getContactDao().getAllContacts()
+    }
 }

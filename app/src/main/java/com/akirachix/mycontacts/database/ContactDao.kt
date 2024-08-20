@@ -16,7 +16,7 @@ interface ContactDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertContact(contact: Contact)
 
-        @Query("SELECT * FROM Contacts")
+        @Query("SELECT * FROM Contacts ORDER BY name")
         fun getAllContacts(): LiveData<List<Contact>>
 
         @Query("SELECT * FROM Contacts where contactId= :contactId")
