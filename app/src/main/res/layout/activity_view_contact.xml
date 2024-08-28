@@ -8,64 +8,78 @@
     tools:context=".ui.ViewContactActivity">
 
     <ImageView
-        android:id="@+id/idContactImage"
+        android:id="@+id/ivContactImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.426"
         android:src="@drawable/user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/idContactName"
+        android:id="@+id/tvContactName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        tools:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idContactImage" />
+        app:layout_constraintTop_toBottomOf="@+id/ivContactImage"
+        tools:text="TextView" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idContactName"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivMessage"
+        app:layout_constraintStart_toStartOf="@id/ivContactImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvContactName"
         app:srcCompat="@drawable/baseline_call_24" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/idContactName"
-        app:srcCompat="@drawable/baseline_sms_24"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="258dp" />
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@+id/ivPhone"
+        app:layout_constraintTop_toBottomOf="@+id/tvContactName"
+        app:srcCompat="@drawable/baseline_sms_24" />
 
     <TextView
         android:id="@+id/tvContactPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        tools:text="TextView"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/ivPhone"
+        tools:hint="Phone number"
+        tools:text="TextView"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/tvContactEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="24dp"
+        tools:hint="Email"
+        tools:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContactPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tvContactPhoneNumber"
+        android:textSize="18sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

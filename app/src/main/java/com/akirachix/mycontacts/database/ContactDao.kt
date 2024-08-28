@@ -16,16 +16,16 @@ interface ContactDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertContact(contact: Contact)
 
-        @Query("SELECT * FROM Contacts ORDER BY name")
-        fun getAllContacts(): LiveData<List<Contact>>
+    @Query("SELECT * FROM Contacts ORDER BY name")
+    fun getAllContacts(): LiveData<List<Contact>>
 
-        @Query("SELECT * FROM Contacts where contactId= :contactId")
-        fun getContactById(contactId: Int): LiveData<Contact>
+    @Query("SELECT * FROM Contacts where contactId= :contactId")
+    fun getContactById(contactId: Int): LiveData<Contact>
 
-        @Update
-        fun updateContact(contact: Contact)
+    @Update
+    fun updateContact(contact: Contact)
 
-        @Delete
-        fun deleteContact(contact: Contact)
+    @Delete
+    fun deleteContact(contact: Contact)
 
 }

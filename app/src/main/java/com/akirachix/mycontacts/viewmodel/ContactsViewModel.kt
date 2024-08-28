@@ -17,6 +17,16 @@ class ContactsViewModel: ViewModel() {
     fun getAllContacts(): LiveData<List<Contact>> {
         return contactsRepo.getAllContacts()
     }
+
+    fun getContactById(contactId: Int):LiveData<Contact>{
+        return contactsRepo.getContactById(contactId)
+    }
+
+    fun updateContact(contact:Contact){
+        viewModelScope.launch {
+            contactsRepo.updateContact(contact)
+        }
+    }
 }
 
 

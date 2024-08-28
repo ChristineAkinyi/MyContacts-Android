@@ -46,7 +46,7 @@ class AddContactActivity : AppCompatActivity() {
         if (!error){
             val newContact = Contact(contactId = 0, name= name, email= email, phoneNumber = phone, avatar = "" )
             contactsViewModel.saveContact(newContact)
-            finish()
+//            finish()
         }
     }
 }

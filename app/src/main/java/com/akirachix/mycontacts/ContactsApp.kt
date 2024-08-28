@@ -1,4 +1,4 @@
-package com.akirachix.mycontacts.model
+package com.akirachix.mycontacts
 
 import android.app.Application
 import android.content.Context

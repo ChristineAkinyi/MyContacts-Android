@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        binding.fabAddContact.setOnClickListener{
+        binding.fabSaveContact.setOnClickListener{
             startActivity(Intent(this, AddContactActivity::class.java))
         }
         contactsViewModel.getAllContacts().observe(this){contactsList ->
@@ -35,14 +35,7 @@ class MainActivity : AppCompatActivity() {
         val contactsAdapter = ContactsAdapter(contactsList, this)
         binding.rvContacts.adapter = contactsAdapter
 //        val contact1 = Contact("Tina", "0712345677", "tina@gmail.com", "")
-//        val contact2 = Contact("John", "0712345678", "john@gmail.com", "")
-//        val contact3 = Contact("Wangesha", "0712345676", "wangesha@gmail.com", "")
-//        val contact4 = Contact("Waluse", "0712345675", "waluse@gmail.com", "")
-//        val contact5 = Contact("Hannah", "0712345674", "hannah@gmail.com", "")
-//        val contact6 = Contact("Queen", "0712345673", "queen@gmail.com", "")
-//        val contact7 = Contact("Chep", "0712345672", "chep@gmail.com", "")
-
-//        val contactsList = listOf(contact1,contact2,contact3,contact4,contact5,contact6,contact7)
+//       //val contactsList = listOf(contact1,contact2,contact3,contact4,contact5,contact6,contact7)
 //        val contactsAdapter = ContactsAdapter(contactsList)
 //        binding.rvContacts.adapter = contactsAdapter
     }

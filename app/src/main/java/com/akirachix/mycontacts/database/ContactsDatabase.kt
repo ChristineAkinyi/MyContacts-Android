@@ -1,12 +1,12 @@
 package com.akirachix.mycontacts.database
 
 import android.content.Context
-import android.provider.ContactsContract.Contacts
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.akirachix.mycontacts.model.Contact
 
-@Database(entities = arrayOf(Contacts::class), version = 1)
+@Database(entities = arrayOf(Contact::class), version = 1)
 abstract class ContactsDatabase: RoomDatabase() {
 
     abstract fun getContactDao(): ContactDao
